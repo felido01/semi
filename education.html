@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Felix Idowu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('./paper-files-pot-plant-closed-laptop-smartphone-black-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 80px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: crimson;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: crimson;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-container {
+            width: 80%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin: 10px auto 20px auto;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                margin-bottom: 5px;
+            }
+
+            .about-container {
+                width: 90%;
+                padding: 15px;
+                margin: 20px auto 20px auto;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FELIX <span>IDOWU</span></div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="cert.html">CERTIFICATION</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="#" class="active">EDUCATION</a>
+            <a href="./contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>EDUCATION</h1>
+    </div>
+
+    <div class="about-container">
+        <h2 style="color: rgb(236, 81, 81);">Lagos State University (LASU)</h2>
+        <p style="color: rgb(236, 81, 81);"><strong>Degree:</strong> BSc in Electronics and Computer Engineering</p>
+        <p style="color: rgb(236, 81, 81);"><strong>Duration:</strong> 2023 - Expected Graduation 2027</p>
+        <p>The program majors in electronics/hardware and software engineering. It includes hands-on practical sessions and entails areas such as control systems, circuit design, and embedded systems. Additionally, core computer science topics such as Data Structures and Algorithms, Python programming, and Statistics are integral parts of the curriculum. LASU is a prestigious and well-known university in Nigeria, recognized for its excellence in engineering education.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

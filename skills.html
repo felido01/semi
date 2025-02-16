@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Felix Idowu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('./paper-files-pot-plant-closed-laptop-smartphone-black-background.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: crimson;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 10px;
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        .skills-section {
+            position: relative;
+            padding: 100px 50px;
+            text-align: center;
+            z-index: 2;
+            margin-top: 70px;
+        }
+
+        .skills-section h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Desktop Grid Layout (4 rows × 2 columns) */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Skill Bubbles */
+        .skill-bubble {
+            padding: 18px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(235, 138, 159);
+            width: 80%;
+            margin: auto;
+            min-height: 60px; /* Ensure equal height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Mobile View (1 column × 8 rows) */
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, auto);
+                gap: 15px;
+            }
+
+            .skill-bubble {
+                width: 95%;
+                max-width: 400px; /* Wider bubbles */
+                font-size: 18px;
+                min-height: 80px; /* Consistent height */
+            }
+        }
+
+        .crimson {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FELIX <span>IDOWU</span></div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav class="nav-links">
+            <a href="./home.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="cert.html">CERTIFICATIONS</a>
+            <a href="./projects.html">PROJECTS</a>
+            <a href="#skills-section" class="active">SKILLS</a>
+            <a href="./education.html">EDUCATION</a>
+            <a href="./contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="skills-section" id="skills-section">
+        <h1>Sk<span class="crimson">il</span>ls</h1>
+        <div class="skills-container">
+            <div class="skill-bubble">Python (Pandas, Numpy, Matplotlib)</div>
+            <div class="skill-bubble">SQL (PostgreSQL)</div>
+            <div class="skill-bubble">Spreadsheets (Google Sheets and Excel)</div>
+            <div class="skill-bubble">Data Visualization (Power BI)</div>
+            <div class="skill-bubble">Machine Learning (Scikit Learn)</div>
+            <div class="skill-bubble">Statistics (Descriptive and Inferential)</div>
+            <div class="skill-bubble">Data Cleaning and Manipulation</div>
+            <div class="skill-bubble" id="eda">Exploratory Data Analysis (EDA)</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Shorten "Exploratory Data Analysis" text in mobile view
+        if (window.innerWidth <= 768) {
+            document.getElementById('eda').textContent = "EDA";
+        }
+    </script>
+
+</body>
+</html>

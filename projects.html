@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Felix Idowu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('./paper-files-pot-plant-closed-laptop-smartphone-black-background.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: crimson;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .projects-section {
+            position: relative;
+            padding: 100px 50px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .projects-section h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 0 20px;
+            justify-content: center;
+            align-items: stretch;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .project-bubble {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .project-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(235, 138, 159);
+            margin-bottom: 10px;
+        }
+
+        .project-text {
+            font-size: 16px;
+            color: white;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            .nav-links a {
+                padding: 10px;
+                display: block;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .dyes{
+            color: rgb(207, 96, 118);
+        }
+        .crimson{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FELIX <span>IDOWU</span></div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav class="nav-links">
+            <a href="./home.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="cert.html">CERTIFICATIONS</a>
+            <a href="#projects-section" class="active">PROJECTS</a>
+            <a href="./skills.html">SKILLS</a>
+            <a href="./education.html">EDUCATION</a>
+            <a href="./contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="projects-section" id="projects-section">
+        <h1>Pr<span class="crimson">ojec</span>ts</h1>
+        <div class="projects-container">
+            <div class="project-bubble">
+                <h3 class="project-title">Employee Attrition Analysis</h3>
+                <p class="project-text">Developed a predictive model to analyze employee attrition patterns using machine learning. Identified key factors influencing turnover and provided data-driven retention strategies. <a class="dyes" href="https://medium.com/@felixidowu.01/hr-employee-attrition-analytics-3e22db3cbb87">Click to view</a></p>
+            </div>
+            <div class="project-bubble">
+                <h3 class="project-title">Sales Performance Analysis</h3>
+                <p class="project-text">Built a dynamic dashboard to monitor sales trends and performance metrics. Leveraged data visualization to uncover insights for revenue growth and business strategy optimization. <a class="dyes" href="">Click to view</a></p>
+            </div>
+            <div class="project-bubble">
+                <h3 class="project-title">Fraud Detection</h3>
+                <p class="project-text">Implemented an anomaly detection system using machine learning to identify fraudulent financial transactions. Achieved improved accuracy in fraud detection and risk mitigation. <a class="dyes" href="">Click to view</a></p>
+            </div>
+            <div class="project-bubble">
+                <h3 class="project-title">Titanic Survival Prediction</h3>
+                <p class="project-text">Developed a classification model to predict passenger survival based on historical Titanic data. Applied feature engineering and machine learning algorithms for improved prediction accuracy. <a class="dyes" href="">Click to view</a> </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

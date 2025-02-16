@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Felix Idowu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('./paper-files-pot-plant-closed-laptop-smartphone-black-background.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: crimson;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: crimson;
+            text-decoration: underline; /* Underline effect on hover */
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .certifications-section {
+            position: relative;
+            padding: 100px 50px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .certifications-section h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+        }
+.lye{
+    color: rgb(228, 122, 122);
+
+}
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+            column-gap: 10px; /* Reduced the gap between columns */
+            row-gap: 30px; /* Keeps row spacing unchanged */
+            justify-content: center;
+            padding: 0 20px; /* Reduced padding on the sides */
+        }
+
+        .certification-bubble {
+            position: relative; /* Removed absolute positioning */
+            width: 80%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin: 20px auto 10px auto; /* Ensured spacing */
+            animation: bounce 2s infinite;
+        }
+
+        .certification-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .certification-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(235, 138, 159);
+            margin-bottom: 10px;
+        }
+
+        .certification-text {
+            font-size: 16px;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .crimson {
+            color: crimson;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                font-size: 18px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .certifications-section {
+                padding: 80px 20px;
+            }
+
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
+
+            .certification-bubble {
+                padding: 15px;
+                min-height: 150px;
+            }
+
+            .certification-title {
+                font-size: 18px;
+            }
+
+            .certification-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FELIX <span>IDOWU</span></div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="./home.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="#certifications-section" class="active">CERTIFICATIONS</a>
+            <a href="./projects.html">PROJECTS</a>
+            <a href="./skills.html">SKILLS</a>
+            <a href="./education.html">EDUCATION</a>
+            <a href="./contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="certifications-section" id="certifications-section">
+        <h1>Certi<span class="crimson">fica</span>tions</h1>
+        <div class="certifications-container">
+            <div class="certification-bubble">
+                <div class="certification-title">Google Data Analytics</div>
+                <div class="certification-text">
+                    I earned the <a href="https://drive.google.com/file/d/1AOfnzKIl31urTXEaN93ZbMx9FPXwvPb6/view?usp=drivesdk" target="_blank" class="lye">Google Data Analytics Certificate</a> from Coursera, developing skills in data cleaning, visualization, SQL, and R. The program involved real-world applications using Google Sheets and Tableau, strengthening my ability to analyze data, make data-driven decisions, and share insights through visuals.
+                </div>
+            </div>
+            <div class="certification-bubble">
+                <div class="certification-title">Meta Data Analytics</div>
+                <div class="certification-text">
+                    I earned the <a href="https://drive.google.com/file/d/1AWNB6lY3h0wLNOMMlBOn-FYBtK5HGq1z/view?usp=drivesdk" target="_blank" class="lye">Meta Data Analyst Certificate</a> on Coursera, building proficiency in SQL, Python, and data visualization. The program covered data querying, dashboard creation, and reporting using Excel and Python. Hands-on projects enhanced my ability to turn complex data into actionable insights.
+                </div>
+            </div>
+            <div class="certification-bubble">
+                <div class="certification-title">Data Science Intern</div>
+                <div class="certification-text">
+                    I earned the <a href="https://drive.google.com/file/d/16GxcOm5z0UQ2bWHhYHWhhXlWz1TjO6WR/view?usp=drivesdk" target="_blank" class="lye"> Data Science Internship Certificate</a> from CodSoft, working with real datasets to apply data analysis, visualization, and machine learning using Python.
+                </div>
+            </div>
+            <div class="certification-bubble">
+                <div class="certification-title">Business Intelligence</div>
+                <div class="certification-text">
+                    I earned the <a href="https://drive.google.com/file/d/1AQ9UuZ02sHePAy05MnEv9wrkstnvw0WY/view?usp=drivesdk" target="_blank" class="lye">Google Business Intelligence Certificate</a> on Coursera, gaining skills in data modeling, SQL, and BI tools. The program covered data structuring, dashboard design, and reporting with BigQuery, Tableau, and spreadsheets.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
